@@ -8,10 +8,10 @@ export default function addCart() {
 
 async function detectProduct(e) {
   if (e.target.classList.contains("add__to__cart__btn")) {
-    const btnAddToCart = e.target;
-    const btnProductId = +btnAddToCart.dataset.id;
+    const btn = e.target;
+    const productId = +btn.dataset.id;
 
     // fetch single product -->btn
-    const product = await fetchSingleProduct(btnProductId);
+    const product = await fetchSingleProduct(productId, btn);
   }
 }
