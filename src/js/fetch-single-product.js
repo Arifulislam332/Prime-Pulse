@@ -1,4 +1,4 @@
-import { renderSingleProductLoading } from "./render";
+import { renderSingleProductError, renderSingleProductLoading } from "./render";
 
 export default async function fetchSingleProduct(id, btn) {
   try {
@@ -8,7 +8,7 @@ export default async function fetchSingleProduct(id, btn) {
     const data = await res.json();
     return data;
   } catch (error) {
-    console.log(error.message);
+    renderSingleProductError(error.message);
   } finally {
     renderSingleProductLoading(false, btn);
   }

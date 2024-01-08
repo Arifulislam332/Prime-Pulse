@@ -65,13 +65,25 @@ export function renderSingleProductLoading(loadingState, element) {
   if (loadingState) {
     const template = `
       <span class="animate-spin">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-loader"><line x1="12" x2="12" y1="2" y2="6"/><line x1="12" x2="12" y1="18" y2="22"/><line x1="4.93" x2="7.76" y1="4.93" y2="7.76"/><line x1="16.24" x2="19.07" y1="16.24" y2="19.07"/><line x1="2" x2="6" y1="12" y2="12"/><line x1="18" x2="22" y1="12" y2="12"/><line x1="4.93" x2="7.76" y1="19.07" y2="16.24"/><line x1="16.24" x2="19.07" y1="7.76" y2="4.93"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-loader-2"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
       </span>
   `;
 
     element.textContent = " ";
     element.insertAdjacentHTML("beforeend", template);
-  }else{
-    element.textContent="Add to cart"
+  } else {
+    element.textContent = "Add to cart";
   }
+}
+
+const errorPopup = document.querySelector(".error__popup");
+export function renderSingleProductError(message) {
+  errorPopup.classList.remove("opacity-0", "-translate-y-40");
+  errorPopup.classList.add("opacity-100", "-translate-y-0");
+  errorPopup.textContent = message;
+
+  setTimeout(() => {
+    errorPopup.lastChild.add("opacity-0", "-translate-y-40");
+    errorPopup.classList.remove("opacity-100", "-translate-y-0");
+  },3000);
 }
