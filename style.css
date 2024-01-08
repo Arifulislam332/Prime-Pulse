@@ -10,6 +10,6 @@
   }
 
   .btn {
-    @apply bg-cyan text-light py-2.5 px-5 rounded-xl font-medium shadow-2xl shadow-gray/25 hover:bg-cyan/80 transition duration-300 ease-in-out;
+    @apply bg-cyan text-light rounded-xl font-medium shadow-2xl shadow-gray/25 hover:bg-cyan/80 transition duration-300 ease-in-out w-32 h-12 flex justify-center items-center text-center;
   }
 }
