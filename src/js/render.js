@@ -83,7 +83,7 @@ export function renderSingleProductError(message) {
   errorPopup.textContent = message;
 
   setTimeout(() => {
-    errorPopup.lastChild.add("opacity-0", "-translate-y-40");
     errorPopup.classList.remove("opacity-100", "-translate-y-0");
-  },3000);
+    errorPopup.classList.add("opacity-0", "-translate-y-40");
+  }, 2500);
 }
