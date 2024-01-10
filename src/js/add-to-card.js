@@ -1,4 +1,5 @@
 import fetchSingleProduct from "./fetch-single-product";
+import { updateCartCounter } from "./render";
 import store from "./store";
 
 const productsWrapper = document.querySelector(".products__wrapper");
@@ -16,6 +17,6 @@ async function detectProduct(e) {
     const product = await fetchSingleProduct(productId, btn);
     console.log(product);
     store("ADD_PRODUCT", product);
-    console.log(store());
+    updateCartCounter()
   }
 }
