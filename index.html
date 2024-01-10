@@ -6,28 +6,49 @@
     <title>Prime Pulse</title>
   </head>
   <body class="bg-light text-dark antialiased">
-    <header class="h-20 border-b border-gray/50 flex items-center fixed top-0 right-0 left-0 w-full bg-light/70 backdrop-blur-2xl">
-      <nav class="container flex justify-between">
-        <a href="#" class="lowercase font-semibold">Prime pulse<span class="text-orange font-semibold">.</span></a>
+    <header
+      class="h-20 border-b border-gray/50 flex items-center fixed top-0 right-0 left-0 w-full bg-light/70 backdrop-blur-2xl z-[100]"
+    >
+      <nav class="container flex justify-between items-center gap-5">
+        <a href="#" class="lowercase text-orange/80 text-xl font-semibold"
+          >Prime pulse<span class="text-cyan">.</span></a
+        >
 
-        <div class="flex gap-8">
-          <ul class="flex gap-5">
+        <div class="flex gap-5 items-center">
+          <ul class="flex gap-5 font-medium items-center">
             <li><a href="#">Home</a></li>
             <li><a href="#">Store</a></li>
             <li><a href="#">Support</a></li>
             <li><a href="#about__us">About Us</a></li>
           </ul>
-          <span class="cursor-pointer">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+          <span class="cursor-pointer hover:text-orange transition duration-300 ease-in-out">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-shopping-cart"
+            >
+              <circle cx="8" cy="21" r="1" />
+              <circle cx="19" cy="21" r="1" />
+              <path
+                d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+              />
+            </svg>
           </span>
         </div>
       </nav>
     </header>
-    <main>
+    <main class="py-20">
       <!-- PRODUCTS SECTION -->
       <section class="production__section container py-20">
         <!-- SECTION TITLE -->
-        <h2 class="section__title uppercase">Browse all products</h2>
+        <h2 class="section__title">Browse all products</h2>
 
         <!-- PRODUCT WRAPPER -->
         <div
@@ -38,8 +59,9 @@
       </section>
 
       <!-- ERROR POP-UP -->
-      <div class="error__popup fixed left-1/2 top-10 -translate-y-40 opacity-0 -translate-x-1/2 z-[100] w-full md:w-96 px-10 py-7 rounded-2xl shadow-2xl shadow-gray/25 bg-rose-50 border-2 border-rose-300 text-rose-600 transition-transform duration-500 ease-out">
-      </div>
+      <div
+        class="error__popup fixed left-1/2 top-20 -translate-y-40 opacity-0 -translate-x-1/2 z-[100] w-full md:w-96 px-10 py-7 rounded-2xl shadow-2xl shadow-gray/25 bg-rose-50 border-2 border-rose-300 text-rose-600 transition-transform duration-500 ease-out"
+      ></div>
     </main>
     <script type="module" src="/main.js"></script>
   </body>
