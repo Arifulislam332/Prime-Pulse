@@ -15,8 +15,7 @@ async function detectProduct(e) {
 
     // fetch single product -->btn
     const product = await fetchSingleProduct(productId, btn);
-    console.log(product);
     store("ADD_PRODUCT", product);
-    updateCartCounter()
+    updateCartCounter();
   }
 }

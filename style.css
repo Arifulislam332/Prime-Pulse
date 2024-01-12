@@ -6,7 +6,7 @@
 
 @layer utilities {
   .section__title {
-    @apply text-4xl font-medium text-center mb-10;
+    @apply flex flex-col justify-center items-center text-4xl font-medium  mb-10;
   }
 
   .btn {
@@ -14,5 +14,20 @@
   }
   ul > li > a {
     @apply hover:text-cyan transition duration-300 ease-in-out ;
+  }
+  .form__control{
+    @apply flex flex-col w-full text-xl font-medium
+  }
+  .form__control > input {
+    @apply flex flex-col py-3 px-2 border-none rounded-lg bg-white text-dark/50
+
+  }
+  .form__control > label {
+    @apply text-dark/70
+
+  }
+  .form__control > ::placeholder {
+    @apply  text-dark/30 
+
   }
 }

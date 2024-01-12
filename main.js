@@ -5,4 +5,4 @@ import { updateCartCounter } from "./src/js/render";
 
 fetchProducts();
 addCart();
-updateCartCounter()
+updateCartCounter();

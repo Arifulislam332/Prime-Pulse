@@ -7,10 +7,10 @@
   </head>
   <body class="bg-light text-dark antialiased">
     <header
-      class="h-20  flex items-center fixed top-0 right-0 left-0 w-full bg-light/70 backdrop-blur-2xl z-[100] shadow-xl shadow-gray/20"
+      class="h-20 flex items-center fixed top-0 right-0 left-0 w-full bg-light/70 backdrop-blur-2xl z-[101] shadow-xl shadow-gray/20"
     >
       <nav class="container flex justify-between items-center gap-5">
-        <a href="#" class=" text-orange/80 text-xl font-semibold"
+        <a href="#" class="text-orange/80 text-xl font-semibold"
           >Prime pulse<span class="text-cyan">.</span></a
         >
 
@@ -18,11 +18,15 @@
           <ul class="flex gap-5 font-medium items-center">
             <li><a href="#">Home</a></li>
             <li><a href="#">Store</a></li>
-            <li><a href="#">Support</a></li>
-            <li><a href="#about__us">About Us</a></li>
+            <li><a href="#registration">Registration</a></li>
+            <!-- <li><a href="#about__us"></a></li> -->
           </ul>
-          <button class="hover:text-orange transition duration-300 ease-in-out relative">
-            <span class="cart__counter absolute -right-4 -top-1 w-5 h-5 rounded-full bg-cyan flex items-center justify-center text-xs font-semibold text-white"></span>
+          <button
+            class="hover:text-orange transition duration-300 ease-in-out relative"
+          >
+            <span
+              class="cart__counter absolute -right-4 -top-1 w-5 h-5 rounded-full bg-cyan flex items-center justify-center text-xs font-semibold text-white"
+            ></span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -45,6 +49,7 @@
         </div>
       </nav>
     </header>
+
     <main class="py-20">
       <!-- PRODUCTS SECTION -->
       <section class="production__section container py-20">
@@ -63,7 +68,47 @@
       <div
         class="error__popup fixed left-1/2 top-20 -translate-y-40 opacity-0 -translate-x-1/2 z-[100] w-full md:w-96 px-10 py-7 rounded-2xl shadow-2xl shadow-gray/25 bg-rose-50 border-2 border-rose-300 text-rose-600 transition-transform duration-500 ease-out"
       ></div>
+
+      <!-- CONTACT SECTION -->
+      <section id="registration" class="py-20">
+        <div class=" container flex flex-col  items-center">
+          <!-- SECTION TITLE -->
+          <h2 class="container section__title">Create your account</h2>
+          <!-- FORM -->
+          <form class=" flex flex-col w-[700px] gap-4">
+            <div class="form__control">
+              <!-- FIRST NAME -->
+              <label for="first__name">First Name :</label>
+              <input type="text" name="" id="first__name" placeholder="Prime" required>
+            </div>
+            <!-- LAST NAME -->
+            <div class="form__control">
+              <label for="last__name">Last Name :</label>
+              <input type="text" name="" id="last__name" placeholder="Pulse" required>
+            </div>
+            <!-- EMAIL -->
+            <div class="form__control">
+              <label for="email">Email :</label>
+              <input type="email" name="" id="email" placeholder="primepulse@gmail.com" required>
+            </div>
+            <!-- NUMBER -->
+            <div class="form__control">
+              <label for="contact">Contact :</label>
+              <input type="number" name="" id="contact" placeholder="+088" required>
+            </div>
+            <!-- PASSWORD -->
+            <div class="form__control">
+              <label for="password">Password :</label>
+              <input type="password" name="" id="password" placeholder="type 8 character" required>
+            </div>
+            <!-- SUBMIT BUTTON -->
+            <button class="btn mt-3" type="submit">Submit Now</button>
+          </form>
+        </div>
+      </section>
     </main>
+
+    <footer id="about__us"></footer>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
