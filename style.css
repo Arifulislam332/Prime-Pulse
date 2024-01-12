@@ -30,4 +30,10 @@
     @apply  text-dark/30 
 
   }
+  .footer__info{
+    @apply text-gray/80 flex flex-col gap-2 items-start
+  }
+  .footer__title{
+    @apply text-xl pb-3 font-medium text-gray/90
+  }
 }

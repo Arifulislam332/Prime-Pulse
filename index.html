@@ -50,9 +50,9 @@
       </nav>
     </header>
 
-    <main class="py-20">
+    <main>
       <!-- PRODUCTS SECTION -->
-      <section class="production__section container py-20">
+      <section class="production__section container py-40">
         <!-- SECTION TITLE -->
         <h2 class="section__title">Browse all products</h2>
 
@@ -70,14 +70,14 @@
       ></div>
 
       <!-- CONTACT SECTION -->
-      <section id="registration" class="py-20">
+      <section id="registration" class="pb-40">
         <div class=" container flex flex-col  items-center">
           <!-- SECTION TITLE -->
           <h2 class="container section__title">Create your account</h2>
           <!-- FORM -->
           <form class=" flex flex-col w-[700px] gap-4">
+            <!-- FIRST NAME -->
             <div class="form__control">
-              <!-- FIRST NAME -->
               <label for="first__name">First Name :</label>
               <input type="text" name="" id="first__name" placeholder="Prime" required>
             </div>
@@ -108,7 +108,32 @@
       </section>
     </main>
 
-    <footer id="about__us"></footer>
+    <footer class=" py-20 bg-dark">
+      <div class="container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10">
+        <div  class="footer__info">
+          <a class="text-xl text-gray/90 font-semibold pb-3" href="#">Prime Pulse.</a>
+          <p>&copy; 2024, Prime Pulse online shop.</p>
+        </div>
+        <div class="footer__info">
+          <h3 class="footer__title">Secure Payment Options</h3>
+          <a href="https://bd.visa.com/">Visa Cart</a>
+          <a href="https://www.paypal.com/bd/home">Paypal</a>
+          <a href="https://www.mastercard.us/en-us.html">Master Cart</a>
+        </div>
+        <div class="footer__info">
+          <h3 class="footer__title">Customer Service</h3>
+          <a href="#">Resources</a>
+          <a href="#">FAQs</a>
+          <a href="#">Help Center</a>
+        </div>
+        <div class="footer__info">
+          <h3 class="footer__title">Address</h3>
+          <a href="#">123,Local Street,New York,NY</a>
+          <a href="#">+088 123456789</a>
+          <a href="mailto:primepulse@mail.com">Email: primepulse@gmail.com</a>
+        </div>
+      </div>
+    </footer>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
