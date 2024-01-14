@@ -13,27 +13,42 @@
     @apply bg-cyan text-light rounded-xl font-medium shadow-2xl shadow-gray/25 hover:bg-cyan/80 transition duration-300 ease-in-out w-32 h-12 flex justify-center items-center text-center;
   }
   ul > li > a {
-    @apply hover:text-cyan transition duration-300 ease-in-out ;
+    @apply hover:text-cyan transition duration-300 ease-in-out;
   }
-  .form__control{
-    @apply flex flex-col w-full text-xl font-medium
-  }
-  .form__control > input {
-    @apply flex flex-col py-3 px-2 border-none rounded-lg bg-white text-dark/50
 
+  /* SLIDER*/
+  .slide{
+    @apply h-[calc(100vh-5rem)] w-screen overflow-hidden
+  }
+  .slide > img{
+    @apply w-full h-full object-cover
+  }
+  button{
+    @apply bg-none h-20 w-20 items-center flex justify-center
+  }
+  .btn__svg{
+    @apply text-gray/40 animate-pulse
+  }
+
+  /* FORM CONTACT */
+  .form__control {
+    @apply flex flex-col w-full text-xl font-medium;
+  } 
+  .form__control > input {
+    @apply flex flex-col py-3 px-2 rounded-lg bg-white text-dark/50 outline-none focus-within:border-2 focus-within:border-cyan/80
   }
   .form__control > label {
-    @apply text-dark/70
-
+    @apply text-dark/70;
   }
   .form__control > ::placeholder {
-    @apply  text-dark/30 
+    @apply text-dark/30;
+  }
 
+  /* FOOTER */
+  .footer__info {
+    @apply text-gray/80 flex flex-col gap-2 items-start;
   }
-  .footer__info{
-    @apply text-gray/80 flex flex-col gap-2 items-start
-  }
-  .footer__title{
-    @apply text-xl pb-3 font-medium text-gray/90
+  .footer__title {
+    @apply text-xl pb-3 font-medium text-gray/90;
   }
 }

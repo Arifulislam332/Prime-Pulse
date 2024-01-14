@@ -2,25 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1
+    .0"
+    />
     <title>Prime Pulse</title>
   </head>
-  <body class="bg-light text-dark antialiased">
+  <body class="bg-light text-dark antialiased overflow-x-hidden">
     <header
-      class="h-20 flex items-center fixed top-0 right-0 left-0 w-full bg-light/70 backdrop-blur-2xl z-[101] shadow-xl shadow-gray/20"
+      class="h-20 shadow-2xl shadow-gray/30 flex items-center fixed top-0 right-0 w-full bg-white/50 backdrop-blur-5xl z-[101]"
     >
+    <!-- NAVBER -->
       <nav class="container flex justify-between items-center gap-5">
+        <!-- NAVBER LOGO -->
         <a href="#" class="text-orange/80 text-xl font-semibold"
           >Prime pulse<span class="text-cyan">.</span></a
         >
-
+        <!-- NAVBER LINKS -->
         <div class="flex gap-5 items-center">
           <ul class="flex gap-5 font-medium items-center">
             <li><a href="#">Home</a></li>
-            <li><a href="#">Store</a></li>
+            <li><a href="#">Offers</a></li>
+            <li><a href="#shop">Shop</a></li>
             <li><a href="#registration">Registration</a></li>
             <!-- <li><a href="#about__us"></a></li> -->
           </ul>
+          <!-- BASKET -->
           <button
             class="hover:text-orange transition duration-300 ease-in-out relative"
           >
@@ -50,12 +58,100 @@
       </nav>
     </header>
 
-    <main>
+    <main class="mt-20">
+      <!-- SLIDE SECTION -->
+      <section class="relative h-[calc(100vh-5rem)] bg-white">
+        <!-- SLIDER -->
+        <div class="h-[calc(100vh-5rem)] w-screen overflow-hidden relative">
+          <!-- SLIDES -->
+          <div class="flex w-[500vw]">
+            <!-- SLIDE 1 -->
+            <div class="slide">
+              <img
+                src="https://img.freepik.com/premium-vector/discount-special-offer-word-concept-vector-illustration-with-lines-modern-futuristic-3d-style_737072-268.jpg"
+                alt="Slide 1"
+              />
+            </div>
+            <!-- SLIDE 2 -->
+            <div class="slide">
+              <img
+                src="https://img.etimg.com/thumb/width-640,height-480,imgsize-27140,resizemode-75,msid-99488010/top-trending-products/news/amazon-blockbuster-value-days-2023-apple-oneplus-mi-samsung-redmi-realme-and-many-more-mobile-phones-on-huge-discount.jpg"
+                alt="Slide 2"
+              />
+            </div>
+            <!-- SLIDE 3 -->
+            <div class="slide">
+              <img
+                src="https://dailypost.ng/wp-content/uploads/2023/11/Black-friday-2Black-Friday-KV-copy.jpg"
+                alt="Slide 3"
+              />
+            </div>
+            <!-- SLIDE 4 -->
+            <div class="slide">
+              <img
+                src="https://www.toofaced.com/media/export/cms/homepage_assets/2024/01-janurary/40-off-palettes_homepage-banner_desktop_left_750x450.jpg"
+                alt="Slide 4"
+              />
+            </div>
+            <!-- SLIDE 5 -->
+            <div class="slide">
+              <img
+                src="https://cdn.daily-sun.com/public/news_images/2021/04/19/Walton.jpg"
+                alt="Slide 5"
+              />
+            </div>
+            <div
+              class="flex absolute left-[3%] right-[3%] bottom-1/2 z-[3] translate-y-[50%] justify-between"
+            >
+              <button class="preview">
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="100%"
+                    height="100%"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-chevron-left btn__svg"
+                  >
+                    <path d="m15 18-6-6 6-6" />
+                  </svg>
+                </span>
+              </button>
+              <button class="next">
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="100%"
+                    height="100%"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-chevron-right btn__svg"
+                  >
+                    <path d="m9 18 6-6-6-6" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute top-0 left-0 right-0 bottom-0 w-full h-full bg-gradient-to-t from-dark/50 to-transparent z-[2]"
+        ></div>
+        <!-- OVERLAY -->
+      </section>
+
       <!-- PRODUCTS SECTION -->
-      <section class="production__section container py-40">
+      <section id="shop" class="production__section container py-40">
         <!-- SECTION TITLE -->
         <h2 class="section__title">Browse all products</h2>
-
         <!-- PRODUCT WRAPPER -->
         <div
           class="products__wrapper grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10"
@@ -71,35 +167,65 @@
 
       <!-- CONTACT SECTION -->
       <section id="registration" class="pb-40">
-        <div class=" container flex flex-col  items-center">
+        <div class="container flex flex-col items-center">
           <!-- SECTION TITLE -->
           <h2 class="container section__title">Create your account</h2>
           <!-- FORM -->
-          <form class=" flex flex-col w-[700px] gap-4">
+          <form class="flex flex-col w-[700px] gap-4">
             <!-- FIRST NAME -->
             <div class="form__control">
               <label for="first__name">First Name :</label>
-              <input type="text" name="" id="first__name" placeholder="Prime" required>
+              <input
+                type="text"
+                name=""
+                id="first__name"
+                placeholder="Prime"
+                required
+              />
             </div>
             <!-- LAST NAME -->
             <div class="form__control">
               <label for="last__name">Last Name :</label>
-              <input type="text" name="" id="last__name" placeholder="Pulse" required>
+              <input
+                type="text"
+                name=""
+                id="last__name"
+                placeholder="Pulse"
+                required
+              />
             </div>
             <!-- EMAIL -->
             <div class="form__control">
               <label for="email">Email :</label>
-              <input type="email" name="" id="email" placeholder="primepulse@gmail.com" required>
+              <input
+                type="email"
+                name=""
+                id="email"
+                placeholder="primepulse@gmail.com"
+                required
+              />
             </div>
             <!-- NUMBER -->
             <div class="form__control">
               <label for="contact">Contact :</label>
-              <input type="number" name="" id="contact" placeholder="+088" required>
+              <input
+                type="number"
+                name=""
+                id="contact"
+                placeholder="+088"
+                required
+              />
             </div>
             <!-- PASSWORD -->
             <div class="form__control">
               <label for="password">Password :</label>
-              <input type="password" name="" id="password" placeholder="type 8 character" required>
+              <input
+                type="password"
+                name=""
+                id="password"
+                placeholder="type 8 character"
+                required
+              />
             </div>
             <!-- SUBMIT BUTTON -->
             <button class="btn mt-3" type="submit">Submit Now</button>
@@ -107,11 +233,15 @@
         </div>
       </section>
     </main>
-
-    <footer class=" py-20 bg-dark">
-      <div class="container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10">
-        <div  class="footer__info">
-          <a class="text-xl text-gray/90 font-semibold pb-3" href="#">Prime Pulse.</a>
+    <!-- FOOTER -->
+    <footer class="py-20 bg-dark">
+      <div
+        class="container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10"
+      >
+        <div class="footer__info">
+          <a class="text-xl text-gray/90 font-semibold pb-3" href="#"
+            >Prime Pulse.</a
+          >
           <p>&copy; 2024, Prime Pulse online shop.</p>
         </div>
         <div class="footer__info">
