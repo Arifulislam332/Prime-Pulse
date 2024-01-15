@@ -17,25 +17,25 @@
   }
 
   /* SLIDER*/
-  .slide{
-    @apply h-[calc(100vh-5rem)] w-screen overflow-hidden
+  .slide {
+    @apply h-[calc(100vh-5rem)] w-screen overflow-hidden;
   }
-  .slide > img{
-    @apply w-full h-full object-cover
+  .slide > img {
+    @apply w-full h-full object-cover;
   }
-  button{
-    @apply bg-none h-20 w-20 items-center flex justify-center
+  button {
+    @apply bg-none h-20 w-20 items-center flex justify-center;
   }
-  .btn__svg{
-    @apply text-gray/40 animate-pulse
+  .btn__svg {
+    @apply text-gray/50 animate-pulse;
   }
 
   /* FORM CONTACT */
   .form__control {
     @apply flex flex-col w-full text-xl font-medium;
-  } 
+  }
   .form__control > input {
-    @apply flex flex-col py-3 px-2 rounded-lg bg-white text-dark/50 outline-none focus-within:border-2 focus-within:border-cyan/80
+    @apply flex flex-col py-3 px-2 rounded-lg bg-white text-dark/50 outline-none focus-within:border-2 focus-within:border-cyan/80;
   }
   .form__control > label {
     @apply text-dark/70;
