@@ -1,7 +1,11 @@
 import "./style.css";
 import fetchProducts from "./src/js/products";
-import addCart from "./src/js/add-to-card";
-import { updateCartCounter } from "./src/js/render";
+import addCart, { removeFromCart } from "./src/js/add-to-card";
+import {
+  cartModal,
+  renderCartElement,
+  updateCartCounter,
+} from "./src/js/render";
 import slideBtn from "./src/js/slides";
 import { updateStorage } from "./src/js/local-storage";
 
@@ -10,3 +14,6 @@ addCart();
 updateCartCounter();
 slideBtn();
 updateStorage();
+cartModal();
+renderCartElement();
+removeFromCart();

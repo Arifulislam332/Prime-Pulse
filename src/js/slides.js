@@ -30,5 +30,5 @@ function preSlide() {
 }
 
 function showSlide(index) {
-  slides.style.transform = `translateX(-${index * 100}vw)`
+  slides.style.transform = `translateX(-${index * 100}vw)`;
 }

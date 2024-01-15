@@ -1,6 +1,13 @@
 import store from "./store";
 
 const productsWrapper = document.querySelector(".products__wrapper");
+const errorPopup = document.querySelector(".error__popup");
+const cartCounter = document.querySelector(".cart__counter");
+const btnCart = document.querySelector(".cart__btn");
+const cartModalEl = document.querySelector(".cart__modal");
+const cartCloseBtn = document.querySelector(".cart__close__btn");
+const cartItems = document.querySelector(".cart__items");
+const cartItemsCountEl = document.querySelector(".cart__items__count");
 
 export function renderLoading(loadingState) {
   const template = `
@@ -78,7 +85,6 @@ export function renderSingleProductLoading(loadingState, element) {
   }
 }
 
-const errorPopup = document.querySelector(".error__popup");
 export function renderSingleProductError(message) {
   errorPopup.classList.remove("opacity-0", "-translate-y-40");
   errorPopup.classList.add("opacity-100", "-translate-y-0");
@@ -90,11 +96,46 @@ export function renderSingleProductError(message) {
   }, 2500);
 }
 
+export function updateCartCounter() {
+  const basket = store();
+  cartCounter.textContent = basket.length;
+}
 
-export function updateCartCounter(){
-  const cartCounter = document.querySelector(".cart__counter");
+// basket item remove/add
+export function cartModal() {
+  btnCart.addEventListener("click", () => {
+    // revel the cart modal
+    cartModalEl.classList.remove("translate-x-full");
+  });
 
-const basket = store();
-cartCounter.textContent = basket.length;
+  cartCloseBtn.addEventListener("click", () => {
+    cartModalEl.classList.add("translate-x-full");
+  });
+}
 
+export function renderCartElement() {
+  const products = store();
+
+  cartItemsCountEl.textContent = products.length;
+
+  if (products.length >= 0) {
+    cartItems.innerHTML = "";
+    products.forEach((product) => {
+      const template = `
+        <div class="grid grid-cols-[40px_auto] gap-5 border-b border-gray pb-5">
+        <img src="${product?.images[0]}" alt="${product?.title}" class="w-[40px] aspect-square object-cover rounded-[5px]">
+        <div>
+          <h5 class="font-medium truncate">${product?.title}</h5>
+          <div class="flex justify-between items-center">
+            <h5 class="font-medium">$${product?.price}</h5>
+            <button class="remove__item__btn" data-id="${product?.id}">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="crimson" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg>
+            </button>
+          </div>
+        </div>
+        </div>
+      `;
+      cartItems.insertAdjacentHTML("beforeend", template);
+    });
+  }
 }

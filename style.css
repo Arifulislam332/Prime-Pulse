@@ -23,7 +23,7 @@
   .slide > img {
     @apply w-full h-full object-cover;
   }
-  button {
+  .slide__icon > button {
     @apply bg-none h-20 w-20 items-center flex justify-center;
   }
   .btn__svg {
