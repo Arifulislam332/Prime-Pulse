@@ -1,5 +1,5 @@
 import fetchSingleProduct from "./fetch-single-product";
-import { renderCartElement, updateCartCounter } from "./render";
+import { getSubtotal, renderCartElement, updateCartCounter } from "./render";
 import store from "./store";
 
 const productsWrapper = document.querySelector(".products__wrapper");
@@ -19,6 +19,7 @@ async function detectProduct(e) {
     store("ADD_PRODUCT", product);
     updateCartCounter();
     renderCartElement();
+    getSubtotal();
   }
 }
 
@@ -33,5 +34,6 @@ function productRemover(e) {
     store("REMOVE_PRODUCT", productId);
     updateCartCounter();
     renderCartElement();
+    getSubtotal();
   }
 }

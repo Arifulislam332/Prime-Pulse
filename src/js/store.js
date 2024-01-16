@@ -19,6 +19,9 @@ export default function store(action = "VIEW_BASKET", payload) {
       basket = newBasket;
       updateStorage("basket", basket);
 
+    case "GET_SUBTOTAL":
+      const subtotal = basket.reduce((sum, el) => (sum += el.price), 0);
+      return subtotal;
 
     case "VIEW_BASKET":
       return basket;

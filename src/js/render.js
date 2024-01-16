@@ -8,6 +8,7 @@ const cartModalEl = document.querySelector(".cart__modal");
 const cartCloseBtn = document.querySelector(".cart__close__btn");
 const cartItems = document.querySelector(".cart__items");
 const cartItemsCountEl = document.querySelector(".cart__items__count");
+const subtotalHolder = document.querySelector(".subtotal__holder");
 
 export function renderLoading(loadingState) {
   const template = `
@@ -122,10 +123,12 @@ export function renderCartElement() {
     cartItems.innerHTML = "";
     products.forEach((product) => {
       const template = `
-        <div class="grid grid-cols-[40px_auto] gap-5 border-b border-gray pb-5">
-        <img src="${product?.images[0]}" alt="${product?.title}" class="w-[40px] aspect-square object-cover rounded-[5px]">
-        <div>
-          <h5 class="font-medium truncate">${product?.title}</h5>
+        <div class="w-full grid grid-cols-[40px_auto] gap-5 border-b border-gray pb-5">
+        <img src="${product?.images[0]}" alt="${
+        product?.title
+      }" class="w-[40px] aspect-square object-cover rounded-[5px]">
+        <div class="w-full">
+          <h5 class="font-medium">${product?.title.substring(0, 15)}</h5>
           <div class="flex justify-between items-center">
             <h5 class="font-medium">$${product?.price}</h5>
             <button class="remove__item__btn" data-id="${product?.id}">
@@ -138,4 +141,9 @@ export function renderCartElement() {
       cartItems.insertAdjacentHTML("beforeend", template);
     });
   }
+}
+
+export function getSubtotal() {
+  const subtotal = store("GET_SUBTOTAL");
+  subtotalHolder.textContent = `$${subtotal}`;
 }
